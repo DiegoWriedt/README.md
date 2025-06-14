@@ -13,7 +13,7 @@ st.dataframe(df) # Se muestra el df en la aplicacion
 
 
 
-st.write('Relación condicion/año')
+st.write('Histograma por año del carro')
 hist_button = st.button('Crear un histograma')
 if hist_button:
      fig = px.histogram(df, x="model_year")
@@ -21,11 +21,11 @@ if hist_button:
 
 
 
-#st.write('Relación precio/odómetro')
-#price_button = st.button('Crear gráfico precio/marca')
-#if price_button:
-#     st.scatter(df, x='odometer', y='price')
-#     st.plotly_chart(fig, use_container_width=True) # duda es correcto este codigo, que hace?
+st.write('Relación precio/odómetro')
+price_button = st.button('Crear gráfico precio/marca')
+if price_button:
+     st.scatter(df, x='odometer', y='price')
+     st.plotly_chart(fig, use_container_width=True) # duda es correcto este codigo, que hace?
 
 
 
