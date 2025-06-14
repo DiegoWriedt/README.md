@@ -26,7 +26,7 @@ if hist_button:
 st.write('Relación precio/odómetro')
 price_button = st.button('Crear gráfico precio/marca')
 if price_button:
-    fig_dis = st.scatter(df, x='odometer', y='price')
+    fig_dis = st.scatter_chart(df, x='odometer', y='price')
     st.plotly_chart(fig_dis, use_container_width=True) # duda es correcto este codigo, que hace?
 
 
