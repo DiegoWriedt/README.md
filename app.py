@@ -18,7 +18,7 @@ hist_button = st.button('Crear un histograma')
 if hist_button:
      fig_hist = px.histogram(df, x="model_year")
      st.plotly_chart(fig_hist, use_container_width=True) #duda es correcto este codigo, que hace?
-     st.bar_chart(df, x="model_year", y="col2", color="condition")
+     st.bar_chart(df, x="model_year", y='model_year'.value_counts(), color="condition")
 
 
 
