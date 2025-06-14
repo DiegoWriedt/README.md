@@ -17,7 +17,7 @@ st.write('Histograma vehicular relacionado con el año')
 hist_button = st.button('Crear un histograma')
 if hist_button:
      fig_hist = px.histogram(df, x="model_year")
-     st.plotly_chart(fig_hist, use_container_width=True) #duda es correcto este codigo, que hace?
+     st.plotly_chart(fig_hist, use_container_width=True) #Se crea un histograma con forme al año
      
 
 
@@ -26,8 +26,8 @@ if hist_button:
 st.write('Relación Precio/Odómetro')
 price_button = st.button('Crear gráfico precio/marca')
 if price_button:
-    fig_dis = st.scatter_chart(df, x='odometer', y='price')
-    st.plotly_chart(fig_dis, use_container_width=True) # duda es correcto este codigo, que hace?
+    fig_dis = px.scatter_chart(df, x='odometer', y='price')
+    px.plotly_chart(fig_dis, use_container_width=True) # Se crea un gráfico de dispersion entre el precio y el kilometraje
 
 
 
