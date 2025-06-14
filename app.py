@@ -26,8 +26,8 @@ if hist_button:
 st.write('Relación Precio/Odómetro')
 price_button = st.button('Crear gráfico precio/marca')
 if price_button:
-    fig_dis = px.scatter_chart(df, x='odometer', y='price')
-    px.plotly_chart(fig_dis, use_container_width=True) # Se crea un gráfico de dispersion entre el precio y el kilometraje
+    fig_dis = px.scatter(df, x='odometer', y='price')
+    st.plotly_chart(fig_dis, use_container_width=True) # Se crea un gráfico de dispersion entre el precio y el kilometraje
 
 
 
