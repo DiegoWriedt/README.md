@@ -3,12 +3,12 @@ import plotly.express as px
 import streamlit as st
 
 
-df = ... # duda
-data_button = st.button('Mostrar el df')
-
-
+df = pd.read_csv('vehicles_us_clean.csv')
 
 st.header('Información de la base de datos sobre los autos')
+
+
+data_button = st.button('Mostrar el df')
 
 
 st.write('Data viewer')
